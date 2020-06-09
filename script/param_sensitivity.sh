@@ -46,8 +46,12 @@ t_task(){
     echo "./train -k ${k_best} -l ${l_best} -t ${t_max} -r -1 -w ${w_best} -c 5 -p te item trva > ${logs_path}/${log_name}"
 }
 
-l_task
-w_task
-k_task
-t_task
+# lambda param
+l_task > job_file
+# w param
+w_task >> job_file
+# k param
+k_task >> job_file
+# t param
+t_task >> job_file
 
