@@ -1,9 +1,9 @@
-%data='ob';
-%data_title='Outbrain';
+data='ob';
+data_title='Outbrain';
 %data='kkbox';
 %data_title='KKBOX'
-data='kdd12';
-data_title='KDD-2012'
+%data='kdd12';
+%data_title='KDD-2012'
 
 names={'k', 'l', 'w', 't'};
 symbols={'$k$', '$\lambda$', '$\omega$', '$T$'};
@@ -26,6 +26,9 @@ for i = [1:3]
     end
     xticks(ticks);
     xticklabels(ticksLabels);
+    
+    a = get(gca,'XTickLabel');  
+    set(gca,'XTickLabel',a,'fontsize',18,'FontWeight','bold')
 
     % lables
     xlabel({xlabels{i}}, 'Interpreter', 'latex', 'FontSize', 22);
@@ -58,6 +61,9 @@ for i = 4
         ticksLabels
     xticks(ticks);
     xticklabels(ticksLabels);
+    
+    a = get(gca,'XTickLabel');  
+    set(gca,'XTickLabel',a,'fontsize',18,'FontWeight','bold')
 
     % labels
     xlabel({xlabels{i}}, 'Interpreter', 'latex', 'FontSize', 22);
