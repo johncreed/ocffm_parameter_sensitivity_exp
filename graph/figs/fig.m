@@ -1,9 +1,9 @@
 %data='ob';
 %data_title='Outbrain';
-data='kkbox';
-data_title='KKBOX'
-%data='kdd12';
-%data_title='KDD-2012'
+%data='kkbox';
+%data_title='KKBOX'
+data='kdd12';
+data_title='KDD-2012'
 
 names={'k', 'l', 'w', 't'};
 symbols={'$k$', '$\lambda$', '$\omega$', '$T$'};
@@ -28,11 +28,11 @@ for i = [1:3]
     xticklabels(ticksLabels);
 
     % lables
-    xlabel({xlabels{i}}, 'Interpreter', 'latex');
-    ylabel('P@5');
+    xlabel({xlabels{i}}, 'Interpreter', 'latex', 'FontSize', 22);
+    ylabel('P@5', 'FontSize', 22);
     
-    title(data_title);
-    saveas(gcf, sprintf('%s-%s.png', data, names{i}));
+    title(data_title, 'FontSize', 22);
+    print(gcf, sprintf('%s-%s.eps', data, names{i}), '-depsc');
 end
 
 % T
@@ -60,9 +60,9 @@ for i = 4
     xticklabels(ticksLabels);
 
     % labels
-    xlabel({xlabels{i}}, 'Interpreter', 'latex');
-    ylabel('P@5');
+    xlabel({xlabels{i}}, 'Interpreter', 'latex', 'FontSize', 22);
+    ylabel('P@5', 'FontSize', 22);
     
-    title(data_title);
-    saveas(gcf, sprintf('%s-%s.png', data, names{i}));
+    title(data_title, 'FontSize', 22);
+    print(gcf, sprintf('%s-%s.eps', data, names{i}), '-depsc');
 end
